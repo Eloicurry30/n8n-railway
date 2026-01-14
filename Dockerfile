@@ -1,0 +1,9 @@
+FROM n8nio/n8n:latest
+
+# Basic Auth
+ENV N8N_BASIC_AUTH_ACTIVE=true
+ENV N8N_BASIC_AUTH_USER=eloi
+ENV N8N_BASIC_AUTH_PASSWORD=Eloi@curry30
+
+# Expose port
+EXPOSE 5678
