@@ -4,7 +4,7 @@ services:
   n8n:
     build: .
     ports:
-      - "5678:5678"
+      - "3000:5678"   # <-- ici, 3000 est le port externe accessible via Railway/Ngrok
     environment:
       - N8N_HOST=0.0.0.0
       - N8N_PORT=5678
@@ -22,7 +22,7 @@ services:
       - N8N_BASIC_AUTH_ACTIVE=true
       - N8N_BASIC_AUTH_USER=eloi
       - N8N_BASIC_AUTH_PASSWORD=Eloi@curry30
-      - N8N_ENCRYPTION_KEY=eloingabire2007
+      - N8N_ENCRYPTION_KEY=eloingabire200712
     depends_on:
       - postgres
 
@@ -34,3 +34,4 @@ services:
       POSTGRES_DB: n8n
     ports:
       - "5432:5432"
+
